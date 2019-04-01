@@ -1,3 +1,9 @@
-sudo: required
-# The language isn't really ruby (it's polyglot) - this is just to avoid travis lint warnings
 language: ruby
+cache: bundler
+ 
+before_script: 'bundle install'
+script: 'bundle exec cucumber'
+ 
+branches:
+  only:
+    - master

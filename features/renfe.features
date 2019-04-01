@@ -1,0 +1,6 @@
+Feature: Search for Trains on Renfe
+
+  Scenario: Search for Trains
+      Given I am on the Renfe home page
+      When I search for "Trains Malaga-Madrid" on a specific day
+      Then Available Trains are returned
