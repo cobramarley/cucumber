@@ -7,6 +7,5 @@ gem "cucumber-rails"
 gem "capybara"
 gem 'cucumber', '~> 4.0.0.rc.1'
 gem 'selenium-webdriver'
-gem 'chromedriver'
 gem 'poltergeist'
 gem 'calabash-android'
