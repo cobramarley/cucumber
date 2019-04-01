@@ -3,8 +3,7 @@ Given("I am on the Renfe home page") do
 end
 
 When("I search for {string} on a specific day") do |string|
-  fill_in 'IdOrigen', with: 'MALAGA MARIA ZAM'
-  click_on(class: 'ui-autocomplete', text:'MALAGA MARIA ZAMBRANO')
+  fill_in 'IdOrigen', with: 'MALAGA MARIA ZAMBRANO'
   fill_in 'IdDestino', with: 'MADRID (TODAS)'
   fill_in '__fechaIdaVisual', with: '27/05/2019'
   fill_in '__fechaVueltaVisual', with: '29/05/2019'
@@ -13,5 +12,5 @@ end
 
 Then("Available Trains are returned") do
   puts page.inspect
-  page.should have_content 'Seleccione el origen. Seleccione el destino.'
+  page.should have_content 'A'
 end
