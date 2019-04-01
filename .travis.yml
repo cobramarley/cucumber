@@ -20,10 +20,6 @@ before_script:
   - sudo chmod +x /usr/local/bin/chromedriver
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-after_success: 'bundle exec cucumber features/*'
- 
-branches:
-  only:
-    - master
 
+script: 'bundle exec cucumber features/*'
     
