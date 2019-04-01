@@ -1,12 +1,17 @@
 language: ruby
 cache: bundler
- 
+
+addons:
+  apt:
+    packages:
+      - google-chrome-stable
+
+      
 before_script: 
   - gem install bundler:2.0.1
   - bundle install
   - bundle update
   - sudo apt-get install libnss3
-  - sudo apt-get --only-upgrade install google-chrome-stable
   - sudo cp chromedriver /usr/local/bin/.
   - sudo chmod +x /usr/local/bin/chromedriver
 script: 'bundle exec cucumber features/*'
@@ -15,9 +20,4 @@ branches:
   only:
     - master
 
-    default:
-      chrome:
-        switches:
-          - "--headless"
-          - "--disable-gpu"
-          - "--no-sandbox"
+    
