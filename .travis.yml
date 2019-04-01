@@ -4,7 +4,7 @@ cache: bundler
 before_script: 
   - gem install bundler:2.0.1
   - bundle update --bundler
-script: 'cucumber features/*'
+script: 'bundle exec cucumber features/*'
  
 branches:
   only:
