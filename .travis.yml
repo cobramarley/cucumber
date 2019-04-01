@@ -2,9 +2,8 @@ language: ruby
 cache: bundler
  
 before_script: 
-  - 'bundle install'
   - 'bundle update --bundler'
-  
+
 script: 'bundle exec cucumber'
  
 branches:
