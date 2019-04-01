@@ -14,3 +14,10 @@ script: 'bundle exec cucumber features/*'
 branches:
   only:
     - master
+
+    default:
+      chrome:
+        switches:
+          - "--headless"
+          - "--disable-gpu"
+          - "--no-sandbox"
