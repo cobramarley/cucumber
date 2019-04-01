@@ -3,7 +3,6 @@ cache: bundler
  
 before_script: 
   - gem install bundler:2.0.1
-  - gem install chromedriver
   - bundle install
   - bundle update
 script: 'bundle exec cucumber features/*'
