@@ -1,0 +1,22 @@
+Feature: Init App
+
+Scenario: Insert name in App
+  When I am on main screen
+  And I touch on "userName"
+  I enter text "nombreeoehu" into field with id "userName"
+
+Scenario: Start play game
+  When I am on main screen
+  And I touch on "userName"
+  I enter text "oeihdj" into field with id "userName"
+  Then I touch on "startGameButton"
+
+Scenario: Take picture
+  When I finished to play
+  And Camara screen appears
+  Then I take a picture
+
+Scenario: Replay
+  When I am on activity score screen
+  And I touch on "replayButton"
+  Then I must be playing again

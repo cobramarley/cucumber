@@ -1,0 +1,6 @@
+source 'http://rubygems.org'
+
+gem 'rubyzip', '1.2.1'
+gem "json"
+gem 'cucumber'
+gem 'calabash-android', '0.9.5'
