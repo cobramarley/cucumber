@@ -21,9 +21,5 @@ before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 
-script:
+after_success:
   - 'bundle exec cucumber features/*'
-  - cd calabash
-  - bundle install
-  - bundle update
-  - 'bundle exec calabash-android run ./app.apk'
