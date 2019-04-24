@@ -16,3 +16,21 @@ Then("videos of forex are returned") do
   puts page.inspect
   page.should have_content 'DAY TRADING'
 end
+
+Then("Videos are returned") do
+  puts page.inspect
+  page.should have_content 'Cristo'
+end
+
+Then("I click on the first video about Cristo") do
+  click_on 'LA PASION DE CRISTO PELICULA COMPLETA EN ESPAÑOL'
+end
+
+When("I click on play") do
+  click_on(class: 'ytp-play-button ytp-button')
+end
+
+Then("I watch Cristo for {int} seconds") do |int|
+  click_on(class: 'ytp-play-button ytp-button')
+  sleep(int)
+end
