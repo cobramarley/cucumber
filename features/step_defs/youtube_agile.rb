@@ -15,10 +15,8 @@ Then("I should see {string}") do |string|
 end
 
 Given("I am watching a video about {string}") do |string|
-  visit 'https://www.youtube.com'
-  fill_in 'search_query', with: string
-  click_on 'search-icon-legacy'
-  click_on 'Agile Leadership: Preparing for an Unconventional Career Path | Emily Phillips | TEDxUWMilwaukee'
+  visit 'https://www.youtube.com/watch?v=NWMS5wDSPs8&t'
+
 end
 
 When("I click on fullscreen") do
@@ -34,7 +32,7 @@ Then("It is done") do
 end
 
 When("I click on class {string}") do |string|
-  click_on(class: string)
+  click_on string
 end
 
 Given("I wait {int} seconds") do |int|
